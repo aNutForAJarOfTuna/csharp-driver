@@ -113,6 +113,7 @@ namespace Cassandra
         public Builder WithPort(int port)
         {
             _port = port;
+            _addresses.ForEach(addr => addr.Port = port);
             return this;
         }
 
